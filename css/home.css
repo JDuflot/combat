@@ -1,0 +1,145 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 20px;
+    border-top: 2px solid white;
+    padding: 20px 0px;
+    transition: 200ms;
+    transform: translateY(-100px);
+}
+
+form label {
+    width: 25%;
+    min-width: 80px;
+}
+
+form button {
+    border: 2px white solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    margin: 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+canvas {
+    cursor: grab;
+}
+
+
+
+.field {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.field input {
+    outline: none;
+    color: white;
+    background-color: black;
+    border: 2px white solid;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.color input{
+  width: 150px;
+  padding: 2px;
+  border-radius: 0;
+
+}
+
+.color label{
+  min-width: 150px;
+}
+
+.characters {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.characters img {
+    object-fit: contain;
+    width: 100%;
+}
+
+#div-canvas-luke, #div-canvas-vador {
+    height: 400px;
+    width: 100%;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.character button {
+    padding: 10px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    border: 2px red solid;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+.luke button{
+   border-color: greenyellow;
+}
+
+.vador {
+    position: relative;
+    animation: moveFromLeft 500ms forwards;
+    animation-timing-function: cubic-bezier(.85,0,.25,.99);
+    left: -100%;
+}
+.luke{
+    position: relative;
+    animation: moveFromRight 500ms forwards;
+    animation-timing-function: cubic-bezier(.85,0,.25,.99);
+    right: -100%;
+}
+
+@media (max-width: 560px) {
+   .characters{
+    flex-direction: column;
+   }
+   .character {
+    width: 100%;
+   }
+   .luke{
+    margin: 30px 0px;
+   }
+   form button {
+    width: 250px;
+   }
+}
+
+@keyframes moveFromLeft {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes moveFromRight {
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 0px;
+    }
+}

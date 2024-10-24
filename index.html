@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="Je suis un développeuse web passionnée, je m'essaie au three js avec ce site. Découvrez mes compétences en développement front-end en jouant à cet ultime combat">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>Le combat ultime || JDuflot</title>
+</head>
+<body>
+    <header>
+        <h1 class="red">
+         Le combat ultime
+        </h1>
+    </header>
+    <section>
+        <p class="red" id="first-paragraph">Bienvenue au <span class="red">combat</span> épic entre Dark Vador et Luke Skywalker
+        </p>
+        <div class="characters">
+            <div class="character vador">
+                <div id="div-canvas-vador">
+                    <canvas id="canvas-vador"></canvas>
+                </div>
+                <!-- <img src="assets/dark_vador.jpg" alt="Dark Vador"> -->
+                <button class="red-illumination" value="vador">
+                    Je choisis Dark Vador
+                </button>
+            </div>
+            <div class="character luke">
+                <div id="div-canvas-luke">
+                    <canvas id="canvas-luke"></canvas>
+                </div>
+                <!-- <img src="assets/luke.jpg" alt="Luke Skywalker"> -->
+                <button class="green-illumination" value="luke">
+                    Je choisis Luke
+                </button>
+            </div>
+        </div>
+        <form class="disabled">
+            <div class="field">
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo">
+                
+            </div>
+            <div class="field color">
+              <label for="color-saber">Couleur du sabre :</label>
+              <input type = "color" id="color-saber">
+            </div>
+            <button
+            class="disabled-but-visible" 
+            type="submit">
+                Commencer le jeu
+            </button>
+        </form>
+    </section>
+    <footer>
+        <p>Contact : l'étoile noire</p>
+    </footer>
+</body>
+</html>

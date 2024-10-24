@@ -1,0 +1,124 @@
+:root {
+    --margin-top-section : 20px;
+    --height-header: 70px;
+    --height-footer: 50px;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif; 
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: var(--height-header);
+    width: 100%;
+    border-bottom: 2px red solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+h1 {
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+section {
+    margin-top: calc(var(--margin-top-section) + var(--height-header));
+    width: 50%;
+    margin-left: 25%;
+    position: relative;
+    min-height: calc(95vh - var(--margin-top-section) - var(--height-header));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer {
+    background-color: black;
+    border-top: 2px greenyellow solid;
+    width: 100%;
+    height: var(--height-footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes turn-loader{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+.loader{
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    border-top: 3px solid greenyellow;
+    border-bottom: 3px solid greenyellow;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+    animation : turn-loader 1000ms infinite linear;
+}
+
+.red-illumination:hover {
+    box-shadow: 0px 0px 7px 2px red;
+}
+
+.green-illumination:hover {
+    box-shadow: 0px 0px 7px 2px greenyellow;
+}
+
+.disabled {
+    display: none !important;
+}
+
+.disabled-but-visible {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.translate-null {
+    transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+    section{
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 800px) {
+    section{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 560px) {
+    section{
+        height: auto;
+    }
+}
